@@ -12,9 +12,11 @@ Every close bracket has a corresponding open bracket of the same type.
 // s = "{}[]";
 
 var isValid = function (s) {
+  // Initialize an empty array called stack to keep track of the opening symbols encountered while processing the input string.
   const stack = [];
+  // object  openSymbols maps the opening symbols to their corresponding closing symbols. For example, '(' maps to ')', '[' maps to ']', and '{' maps to '}'.
   const openSymbols = { "(": ")", "[": "]", "{": "}" };
-
+  //  iterate through each character in the input string using a for...of loop
   for (const char of s) {
     if (openSymbols.hasOwnProperty(char)) {
       // If the character is an opening symbol, push it onto the stack
