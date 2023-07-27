@@ -22,11 +22,11 @@ var isValid = function (s) {
       // If the character is an opening symbol, push it onto the stack
       stack.push(char);
     } else {
-      // If the character is a closing symbol
+      // If the character is a closing symbol the function checks if there is a corresponding opening symbol at the top of the stack. If not, it returns false since there is no matching opening symbol for the closing symbol encountered.
       if (stack.length === 0) {
         return false; // No corresponding opening symbol in the stack
       }
-
+      // If there is a matching opening symbol at the top of the stack, it is popped off the stack, and the function continues to process the next character.
       const lastSymbol = stack.pop();
       if (openSymbols[lastSymbol] !== char) {
         return false; // Closing symbol does not match the last opening symbol
@@ -34,9 +34,10 @@ var isValid = function (s) {
     }
   }
 
-  // If there are any remaining symbols in the stack, the expression is not balanced
+  // If there are any remaining symbols in the stack, the expression is not balanced. If all characters have been processed and the stack is empty, it means all opening symbols have been correctly closed, and the function returns true. Otherwise, if there are any remaining symbols in the stack, the expression is not balanced, and the function returns false.
   return stack.length === 0;
 };
+// examples to demonstrate its usage. The function is called with different input strings, and the results are logged to the console.
 // Example 1
 const inputString1 = "{[()]}";
 const result1 = isValid(inputString1);
