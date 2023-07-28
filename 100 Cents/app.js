@@ -12,5 +12,11 @@ function minCoins(x) {
       arrayOfCoins.push(coins[i]);
     }
     console.log(arrayOfCoins);
+    // https://bobbyhadz.com/blog/javascript-check-how-many-times-element-appears-in-array
+    const count = arrayOfCoins.reduce((accumulator, value) => {
+      accumulator[value] = ++accumulator[value] || 1;
+      return accumulator;
+    }, {});
+    console.log(count);
   }
 }
