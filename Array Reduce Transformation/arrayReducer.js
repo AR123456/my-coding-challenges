@@ -13,15 +13,30 @@ Please solve it without using the built-in Array.reduce method. */
  * @return {number}
  */
 
-nums = [1, 2, 3, 4];
+// nums = [1, 2, 3, 4];
+// fn = function sum(accum, curr) {
+//   return accum + curr;
+// };
+// nums = [1, 2, 3, 4];
+// fn = function sum(accum, curr) {
+//   return accum + curr * curr;
+// };
+// init = 100;
+nums = [];
 fn = function sum(accum, curr) {
-  return accum + curr;
+  return 0;
 };
-init = 0;
+init = 25;
+
 var reduce = function (nums, fn, init) {
-  for (let i = 0; i < nums.length; i++) {
-    const element = nums[i];
-    console.log(nums, fn(nums, init), fn(nums[i], init));
+  if (nums.length === 0) {
+    return init;
   }
+  let res = init;
+  for (let i = 0; i < nums.length; i++) {
+    res = fn(res, nums[i]);
+    console.log(res);
+  }
+  return res;
 };
 reduce(nums, fn, init);
