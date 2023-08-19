@@ -17,3 +17,4 @@ const fizzBuzz = () => {
   }
 };
 fizzBuzz();
+// fizbuzz in es6
