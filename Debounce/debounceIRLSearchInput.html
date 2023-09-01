@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Debounced Search</title>
+</head>
+<body>
+  <input type="text" id="searchInput" placeholder="Search...">
+  <div id="results"></div>
+
+  <script>
+    // Debounce function
+    function debounce(fn, delay) {
+      let timeoutId;
+      return function () {
+        clearTimeout(timeoutId);
+        const args = arguments;
+        timeoutId = setTimeout(function () {
+          fn.apply(null, args);
+        }, delay);
+      };
+    }
+
+    // Simulated API call for search
+    function searchAPI(query) {
+      // Simulate an API request (replace with actual API call)
+      console.log(`Searching for: ${query}`);
+      // Here, you would make your API request and update the results div
+    }
+
+    const searchInput = document.getElementById('searchInput');
+    const resultsDiv = document.getElementById('results');
+
+    // Create a debounced search function
+    const debouncedSearch = debounce(searchAPI, 500);
+
+    searchInput.addEventListener('input', function (event) {
+      const query = event.target.value.trim();
+      debouncedSearch(query); // Call the debounced search function
+    });
+  </script>
+</body>
+</html>
