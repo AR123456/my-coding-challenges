@@ -1,0 +1,9 @@
+closures and higher-order functions
+basic function syntax and anonymous function syntax
+Immediately Invoked Function Expression (IIFE)
+Functions Within Functions
+Function Hoisting
+Closures
+Arrow Syntax
+Basic Syntax
+Omit Return if on one line
