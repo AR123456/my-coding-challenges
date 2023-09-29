@@ -1,0 +1,18 @@
+2636
+Promise Pool 
+
+Given an array of asyncronous  functions and a pool limit, return an asyncronous function promisePool . It should return a promise that resolves when all the input funtions resolve. 
+Pool limit is defined as the maximum number of promises that can be pending at once.  
+promisePool should begin execution of as many functions as possible and continue executing new functions when old promises resolve.  promisePool should execute functions[i] then functions[i+1] then functions [i+2],ect.
+When the last promise resolves, promisePool should also resolve
+
+
+
+ // @param {Function []}functions
+// @param {number}n
+// @param {Function }
+
+var promisePool = async function (functions, n) {};
+
+// const sleep = (t) => NewPromise((res) => setTimeout(res, t));
+// promisePool([() => sleep(500), () => sleep(400)], 1).then(console.log); // after 900ms
