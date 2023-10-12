@@ -1,6 +1,8 @@
 /**
  * @return {null|boolean|number|string|Array|Object}
  */
+// to ge the built in methods of the array use this :
+console.log(Object.getOwnPropertyNames(Array.prototype));
 Array.prototype.last = function () {};
 
 /**
