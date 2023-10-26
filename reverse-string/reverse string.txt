@@ -1,0 +1,7 @@
+return a string in reverse 
+reverseString("hello")  would become olleh
+
+7 ways - best one being using reduce()
+https://www.youtube.com/watch?v=M2bJBuaOeOQ
+
+https://www.freecodecamp.org/news/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb/
