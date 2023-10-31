@@ -4,8 +4,10 @@
 function maxCharacter(str) {
   // look at key value pairs and how many are inside
   const charMap = {};
-  const maxNum = 0;
-  const maxChar = "";
+  // track the number of occurrences
+  let maxNum = 0;
+  // track the character with the max number of occurrences
+  let maxChar = "";
 
   // make string array, loop it and increment the chars
   str.split("").forEach(function (char) {
@@ -21,7 +23,14 @@ function maxCharacter(str) {
   // find the key value pair with the highest value
   // the for in loops an object
   for (let char in charMap) {
+    if (charMap[char] > maxNum) {
+      maxNum = charMap[char];
+      maxChar = char;
+    }
   }
+
+  console.log(maxChar);
+  return maxChar;
 }
 
 maxCharacter("javascript");
