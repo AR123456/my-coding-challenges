@@ -9,5 +9,10 @@ function longestWord(sen) {
   // strip away punctuation and spaces
   const wordArr = sen.toLowerCase().match(/[a-z0-9]+/g);
   console.log(wordArr);
+  // sort by length using sort method
+  const sorted = wordArr.sort(function (a, b) {
+    return b.length - a.length;
+  });
+  console.log(sorted);
 }
-longestWord("Hi there, my name is Brad");
+longestWord("Hello there, my name is Brad");
