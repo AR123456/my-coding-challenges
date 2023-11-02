@@ -13,6 +13,11 @@ function longestWord(sen) {
   const sorted = wordArr.sort(function (a, b) {
     return b.length - a.length;
   });
-  console.log(sorted);
+  console.log(sorted[0]);
+  // if multiple words are longest , put them in an array and compare using filter method
+  const longestWordArr = sorted.filter(function (word) {
+    return word.length === sorted[0].length;
+  });
+  console.log(longestWordArr);
 }
 longestWord("Hello there, my name is Brad");
