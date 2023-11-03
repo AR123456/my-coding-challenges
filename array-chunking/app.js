@@ -4,12 +4,19 @@
 // ex. chunkArray([1, 2, 3, 4, 5, 6, 7], 2) === [[1, 2],[3, 4],[5, 6],[7]]
 
 function chunkArray(arr, len) {
-  // arr input a long array
-  // len input the length of arrays
-  // the chunkArray is an array of smaller arrays
-  arr.map(function () {
-    newArr = arr.pop(len);
-  });
-  console.log(newArr);
+  // Sol 1 while loop
+  // init chunkedArr
+  const chunkedArr = [];
+  // set index
+  i = 0;
+  // while index is less than array length loop
+  while (i < arr.length) {
+    // slice out from i to i + len and push on to chunked array
+    chunkedArr.push(arr.slice(i, i + len));
+    // increment i by the len
+    i += len;
+  }
+  console.log(chunkedArr);
+  return chunkedArr;
 }
 chunkArray([1, 2, 3, 4, 5, 6, 7], 3);
