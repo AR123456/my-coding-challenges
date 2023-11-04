@@ -12,6 +12,13 @@ function chunkArray(arr, len) {
     // get last element
     const last = chunkedArray[chunkedArray.length - 1];
     // will do this for every loop
+    // check if there is a last ( not undefined) and if the last length = len
+    if (!last || last.length === len) {
+      chunkedArray.push([val]);
+    } else {
+      // push in last value
+      last.push(val);
+    }
     console.log(last);
   });
 }
