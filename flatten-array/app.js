@@ -1,6 +1,5 @@
 function flattenArray(arrays) {}
 
-// CHALLENGE 4: ANAGRAM
-// Return true if anagram and false if not
-// ex. 'elbow' === 'below'
-// ex. 'Dormitory' === 'dirty room##'
+// CHALLENGE 3: FLATTEN ARRAY
+// Take an array of arrays and flatten to a single array
+// ex. [[1, 2], [3, 4], [5, 6], [7]] = [1, 2, 3, 4, 5, 6, 7]
