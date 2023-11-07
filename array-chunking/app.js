@@ -16,10 +16,11 @@ function chunkArray(arr, len) {
     if (!last || last.length === len) {
       chunkedArray.push([val]);
     } else {
-      // push in last value
       last.push(val);
     }
-    console.log(last);
+    // console.log(last);
   });
+  console.log(chunkedArray);
+  return chunkedArray;
 }
 chunkArray([1, 2, 3, 4, 5, 6, 7], 3);
