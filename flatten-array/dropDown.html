@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dropdown Menu Example</title>
+    <style>
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dropdown">
+      <button class="dropbtn">Select Category</button>
+      <div class="dropdown-content" id="dropdownContent">
+        <!-- Dropdown items will be dynamically generated here -->
+      </div>
+    </div>
+
+    <script>
+      // Sample hierarchical data
+      let categories = [
+        {
+          name: "Fruits",
+          subcategories: ["Apple", "Banana", "Orange"],
+        },
+        {
+          name: "Vegetables",
+          subcategories: ["Carrot", "Broccoli", "Spinach"],
+        },
+        {
+          name: "Dairy",
+          subcategories: ["Milk", "Cheese", "Yogurt"],
+        },
+      ];
+
+      // Function to generate dropdown items
+      function generateDropdownItems() {
+        let dropdownContent = document.getElementById("dropdownContent");
+
+        categories.forEach((category) => {
+          let categoryItem = document.createElement("div");
+          categoryItem.innerHTML = `<h3>${category.name}</h3>`;
+
+          category.subcategories.forEach((subcategory) => {
+            let subcategoryItem = document.createElement("a");
+            subcategoryItem.textContent = subcategory;
+            categoryItem.appendChild(subcategoryItem);
+          });
+
+          dropdownContent.appendChild(categoryItem);
+        });
+      }
+
+      // Generate dropdown items
+      generateDropdownItems();
+    </script>
+  </body>
+</html>
