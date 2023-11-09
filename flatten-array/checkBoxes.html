@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkbox Form Example</title>
+    <style>
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="checkboxForm">
+      <label
+        ><input type="checkbox" name="fruits[]" value="Apple" /> Apple</label
+      >
+      <label
+        ><input type="checkbox" name="fruits[]" value="Banana" /> Banana</label
+      >
+      <label
+        ><input type="checkbox" name="fruits[]" value="Orange" /> Orange</label
+      >
+      <label
+        ><input type="checkbox" name="vegetables[]" value="Carrot" />
+        Carrot</label
+      >
+      <label
+        ><input type="checkbox" name="vegetables[]" value="Broccoli" />
+        Broccoli</label
+      >
+      <label
+        ><input type="checkbox" name="vegetables[]" value="Spinach" />
+        Spinach</label
+      >
+      <button type="button" onclick="processForm()">Submit</button>
+    </form>
+
+    <script>
+      function processForm() {
+        // Get the form element
+        let form = document.getElementById("checkboxForm");
+
+        // Initialize an empty array to store selected values
+        let selectedValues = [];
+
+        // Loop through all form elements
+        for (let i = 0; i < form.elements.length; i++) {
+          let element = form.elements[i];
+
+          // Check if the element is a checkbox and is checked
+          if (element.type === "checkbox" && element.checked) {
+            selectedValues.push(element.value);
+          }
+        }
+
+        // Flatten the array (if needed)
+        let flattenedArray = [].concat(...selectedValues);
+
+        // Process the selected values (you can do anything with them here)
+        console.log(flattenedArray);
+      }
+    </script>
+  </body>
+</html>
