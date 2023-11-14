@@ -3,9 +3,11 @@
 // ex. addAll(2,5,6,7) === 20
 
 function addAll(nums) {
-  nums+=;
-  
-  
-  console.log(nums);
+  let sum = 0;
+  while (nums) {
+    sum += nums % 10;
+    nums = Math.floor(nums / 10);
+  }
+  console.log(sum);
 }
 addAll(1, 2, 3);
