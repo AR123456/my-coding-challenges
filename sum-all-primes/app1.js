@@ -7,6 +7,12 @@ function sumAllPrimes(num) {
   // start with 2 (the first prime number )
   for (let i = 2; i <= num; i++) {
     // check if i is prime and if it is add it to total
+    for (let j = 2; j < i; i++) {
+      if (i % j === 0) {
+        return false;
+      }
+    }
+    total += 1;
   }
   console.log(total);
 }
