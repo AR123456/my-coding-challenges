@@ -10,6 +10,7 @@ function seekAndDestroy(arr, ...args) {
   // The filter method creates a new array with all elements that pass the provided function's test.
   // the test checks if each element (item) in the array arr is not present in the args array using the includes method.
   //   condition checks if the current element (item) is NOT included in the args array. If it is not included, the element is kept in the filtered array; otherwise, it is excluded.
+  // item is the value
   return arr.filter((item) => !args.includes(item));
 }
 
