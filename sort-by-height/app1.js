@@ -16,9 +16,12 @@ function sortByHeight(a) {
       arr2.push(val);
     }
   });
-  console.log(arr1, arr2);
-  holderArr = arr2.sort();
-  console.log(holderArr);
+  const sortArr = arr2.sort((a, b) => a - b);
+  // spline need index of array one , 0 and the actual value being inserted
+  //   array.splice(index, howmany to remove, element to be added)
+  arr1.forEach((val, i) => sortArr.splice(arr1[i], 0, -1));
+  //   console.log(arr1, arr2);
+  console.log(sortArr);
 }
 
 sortByHeight(a);
