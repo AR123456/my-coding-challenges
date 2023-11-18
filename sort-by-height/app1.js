@@ -4,11 +4,21 @@
 a = [-1, 150, 190, 170, -1, -1, 160, 180];
 // sortByHeight(a) == [-1, 150, 160, 170, -1, -1, 180, 190]
 
-function sortByHeight() {
-  // ignore -1 and keep in place
-  // for the remainder of the values re sort into desending order
-  // truthy is not neg 1
-
-  console.log();
+function sortByHeight(a) {
+  // hole position of the -1
+  const arr1 = [];
+  // hold the values that are not -1
+  const arr2 = [];
+  a.forEach((val, i) => {
+    if (val === -1) {
+      arr1.push(i);
+    } else {
+      arr2.push(val);
+    }
+  });
+  console.log(arr1, arr2);
+  holderArr = arr2.sort();
+  console.log(holderArr);
 }
+
 sortByHeight(a);
