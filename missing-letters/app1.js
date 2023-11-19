@@ -5,11 +5,19 @@
 // missingLetters("abcdefghjklmno") == "i"
 // missingLetters("abcdefghijklmnopqrstuvwxyz") == undefined
 
-function missingLetters() {
+function missingLetters(input) {
   // create array of letters of the alphabet
+  let alphabet = [...Array(26).keys()].map((i) => String.fromCharCode(i + 97));
+  console.log(alphabet);
   // take in the string of letters , make it an array
+  inputArr = Array.from(input);
   // loop the array of input and compare to alphabet
+  for (let i = 0; i < inputArr.length; i++) {
+    console.log(inputArr.every());
+  }
   // if the letter of the input matches the value and position of the input string go on to next letter
   // if it does not then return the unmatched letter from the alphabet
   // if everything matches return undefined
 }
+missingLetters("abce");
+////
