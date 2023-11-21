@@ -10,7 +10,13 @@ function evenOddSums(arr) {
   let odds = [];
   let evens = [];
   for (let i = 0; i < arr.length; i++) {
-    console.log(i);
+    console.log(typeof arr[i]);
+    // if (arr[i] % 0) {
+    //   evens.push(arr[i]);
+    // } else {
+    //   odds.push(arr[i]);
+    // }
   }
+  console.log();
 }
 evenOddSums(arr);
