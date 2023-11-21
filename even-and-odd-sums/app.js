@@ -10,21 +10,16 @@ function evenOddSums(arr) {
   let odds = 0;
   let evens = 0;
   sum = [];
-  arr.forEach((num) => {
-    if (num % 2 === 0) {
-      evens += num;
-    } else {
-      odds += num;
-    }
-  });
-
-  //   for (let i = 0; i < arr.length; i++) {
-  //     if (arr[i] % 2 === 0) {
-  //       evens += arr[i];
+  //   arr.forEach((num) => {
+  //     if (num % 2 === 0) {
+  //       evens += num;
   //     } else {
-  //       odds += arr[i];
+  //       odds += num;
   //     }
-  //   }
+  //   });
+  // shortend forEach
+  arr.forEach((num) => (num % 2 === 0 ? (evens += num) : (odds += num)));
+
   sum.push(odds, evens);
   console.log(sum);
 }
