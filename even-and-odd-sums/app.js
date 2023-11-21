@@ -7,16 +7,17 @@ const { clearScreenDown } = require("readline");
 // evenOddSums([50, 60, 60, 45, 71]) == [170, 116]
 const arr = [50, 60, 60, 45, 71];
 function evenOddSums(arr) {
-  let odds = [];
-  let evens = [];
+  let odds = 0;
+  let evens = 0;
+  sum = [];
   for (let i = 0; i < arr.length; i++) {
-    console.log(typeof arr[i]);
-    // if (arr[i] % 0) {
-    //   evens.push(arr[i]);
-    // } else {
-    //   odds.push(arr[i]);
-    // }
+    if (arr[i] % 2 === 0) {
+      evens += arr[i];
+    } else {
+      odds += arr[i];
+    }
   }
-  console.log();
+  sum.push(odds, evens);
+  console.log(sum);
 }
 evenOddSums(arr);
