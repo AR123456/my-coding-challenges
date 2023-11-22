@@ -35,4 +35,11 @@ const library = [
     status: { own: true, reading: true, read: false },
   },
 ];
+// console.log(library);
+// Step 2
+console.log(library[0].status.read);
+for (let i = 0; i < library.length; i++) {
+  console.log(library[i].status.read);
+  library[i].status.read = true;
+}
 console.log(library);
