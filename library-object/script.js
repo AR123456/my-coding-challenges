@@ -50,3 +50,6 @@ for (let i = 0; i < library.length; i++) {
 // Step 3
 
 console.log(library);
+// step 4
+stringLibrary = JSON.stringify(library);
+console.log(stringLibrary);
