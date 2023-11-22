@@ -43,3 +43,4 @@ for (let i = 0; i < library.length; i++) {
   library[i].status.read = true;
 }
 console.log(library);
+// Step 3
