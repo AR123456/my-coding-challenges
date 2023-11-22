@@ -17,14 +17,22 @@ Destructure the title from the first book and rename the variable to `firstBook`
 
 Turn the library object into a JSON string
 */
-let title = "";
-let author = "";
-let status = { own: true, reading: true, read: false };
+//Step !
 const library = [
   {
-    title,
-    author,
-    status,
+    title: "title1",
+    author: "Author1",
+    status: { own: true, reading: true, read: false },
+  },
+  {
+    title: "title2",
+    author: "Author2",
+    status: { own: true, reading: true, read: false },
+  },
+  {
+    title: "title3",
+    author: "Author3",
+    status: { own: true, reading: true, read: false },
   },
 ];
 console.log(library);
