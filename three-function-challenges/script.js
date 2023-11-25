@@ -50,6 +50,16 @@ Create an arrow function called `minMax()` that takes in an array of numbers and
 console.log(minMax([1, 2, 3, 4, 5]));
 // { min: 1, max: 5 } */
 arr = [1, 2, 3, 4, 5];
-const minMax = () => {};
+const minMax = () => {
+let min=[]
+let max=[]
+for (let i = 0; i < arr.length; i++) {
+ if ( ) {
+    
+ }
+    
+}
+
+};
 
 console.log(minMax(arr));
