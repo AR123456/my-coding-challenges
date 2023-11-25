@@ -51,15 +51,12 @@ console.log(minMax([1, 2, 3, 4, 5]));
 // { min: 1, max: 5 } */
 arr = [1, 2, 3, 4, 5];
 const minMax = () => {
-let min=[]
-let max=[]
-for (let i = 0; i < arr.length; i++) {
- if ( ) {
-    
- }
-    
-}
-
+  //   console.log(Math.min(...arr));
+  //   console.log(Math.max(...arr));
+  return {
+    min: Math.min(...arr),
+    max: Math.max(...arr),
+  };
 };
 
 console.log(minMax(arr));
