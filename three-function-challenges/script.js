@@ -72,4 +72,12 @@ Create an IIFE (Immediately Invoked Function Expression) that takes in the lengt
 ```JavaScript
 // On page load
 The area of a rectangle with a length of 10 and a width of 5 is 50. */
-alert("The area of a rectangle with a length of 10 and a width of 5 is 50");
+
+(function () {
+  let l = 10;
+  let w = 5;
+  a = l * w;
+  console.log(
+    `The area of a rectangle with a length of ${l} and a width of ${w} is ${a}`
+  );
+})();
