@@ -5,9 +5,11 @@
 
 function isPalindrome(str) {
   console.log(str.split("").reverse().join(""));
-  if (str === str.split("").reverse().join("")) {
-    console.log("true");
-  }
+  // if (str === str.split("").reverse().join("")) {
+  //   console.log("true");
+  // }
+  // solved with ternary
+  console.log(str === str.split("").reverse().join("") ? "true" : false);
 }
 
 isPalindrome("racecar");
