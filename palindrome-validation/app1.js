@@ -3,4 +3,8 @@
 // Return true if palindrome and false if not
 // ex. isPalindrome('racecar') === 'true', isPalindrome('hello') == false
 
-function isPalindrome(str) {}
+function isPalindrome(str) {
+  console.log(str.split("").reverse().join(""));
+}
+
+isPalindrome("racecar");
