@@ -3,7 +3,7 @@
 // ex. reverseString('hello') === 'olleh'
 
 function reverseString(str) {
-  console.log(str.split("").reverse().toString());
+  console.log(str.split("").reverse());
 }
 
 reverseString("hello");
