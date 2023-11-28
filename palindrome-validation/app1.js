@@ -5,6 +5,9 @@
 
 function isPalindrome(str) {
   console.log(str.split("").reverse().join(""));
+  if (str === str.split("").reverse().join("")) {
+    console.log("true");
+  }
 }
 
 isPalindrome("racecar");
