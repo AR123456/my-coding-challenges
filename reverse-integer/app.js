@@ -9,9 +9,11 @@
 
 // reverseInt(int);
 
-let int = 125;
+let int = 125.0;
 const reverseInt = (int) => {
-  console.log(parseFloat(int.toString().split("").reverse().join("")));
+  console.log(
+    parseFloat(int.toString().split("").reverse().join("")) * Math.sign(int)
+  );
 };
 
 reverseInt(int);
