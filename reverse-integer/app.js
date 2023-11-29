@@ -2,4 +2,9 @@
 // Return an integer in reverse
 // ex. reverseInt(521) === 125
 
-function reverseInt(int) {}
+let int = 125;
+function reverseInt(int) {
+  console.log(parseFloat(int.toString().split("").reverse().join("")));
+}
+
+reverseInt(int);
