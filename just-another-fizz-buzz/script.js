@@ -6,3 +6,20 @@
 - For **multiples of three** print "Fizz" instead of the number
 - For **multiples of five** print "Buzz"
 - For numbers which are **multiples of both three and five** print "FizzBuzz". */
+
+const fizzBuzz = () => {
+  for (let i = 1; i < 101; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log(`${i} is a multiple of 3 and 5`);
+    }
+    if (i % 5 === 0) {
+      console.log(`${i} is a multiple of 5`);
+    }
+    if (i % 3 === 0) {
+      console.log(`${i} is a multiple of 3`);
+    } else {
+      console.log(i);
+    }
+  }
+};
+fizzBuzz();
