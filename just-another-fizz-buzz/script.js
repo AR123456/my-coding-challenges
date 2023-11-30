@@ -12,14 +12,14 @@ const fizzBuzz = () => {
     if (i % 3 === 0 && i % 5 === 0) {
       console.log(`${i} is a multiple of 3 and 5`);
     }
-    if (i % 5 === 0) {
-      console.log(`${i} is a multiple of 5`);
-    }
-    if (i % 3 === 0) {
-      console.log(`${i} is a multiple of 3`);
-    } else {
-      console.log(i);
-    }
+    // if (i % 5 === 0) {
+    //   console.log(`${i} is a multiple of 5`);
+    // }
+    // if (i % 3 === 0) {
+    //   console.log(`${i} is a multiple of 3`);
+    // } else {
+    //   console.log(i);
+    // }
   }
 };
 fizzBuzz();
