@@ -20,4 +20,25 @@ const fizzBuzz = () => {
     }
   }
 };
-fizzBuzz();
+// fizzBuzz();
+
+const fizzyWhile = () => {
+  let i = 1;
+  while (i < 101) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log(`${i} is a multiple of 3 and 5 - AKA FizzBuzz`);
+      i++;
+    } else if (i % 5 === 0) {
+      console.log(`${i} is a multiple of 5-AKA Buzz`);
+      i++;
+    } else if (i % 3 === 0) {
+      console.log(`${i} is a multiple of 3 AKA Fizz `);
+      i++;
+    } else {
+      console.log(i);
+      i++;
+    }
+  }
+};
+
+fizzyWhile();
