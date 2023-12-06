@@ -44,7 +44,7 @@ const people = [
 const youngPeople = people.map((people) => {
   if (people.age <= 25) {
     return {
-      name: { firstName: people.firstName, lastName: people.lastName },
+      name: people.firstName + " " + people.lastName,
       email: people.email,
     };
   }
