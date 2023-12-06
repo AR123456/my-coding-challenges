@@ -41,3 +41,9 @@ const people = [
     age: 23,
   },
 ];
+const youngPeople = people.map((people) => {
+  if (people.age <= 25) {
+    console.log(people);
+    return people;
+  }
+});
