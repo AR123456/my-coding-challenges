@@ -41,13 +41,13 @@ const people = [
     age: 23,
   },
 ];
-const youngPeople = people
-  .map((people) => {
-    if (people.age <= 25) {
-      console.log(people);
-      return people;
-    }
-  })
-  .map((young) => {
-    console.log(  name: young.fristName );
-  });
+const youngPeople = people.map((people) => {
+  if (people.age <= 25) {
+    return {
+      firstName: people.firstName,
+      lastName: people.lastName,
+      email: people.email,
+    };
+  }
+});
+console.log(youngPeople);
