@@ -41,7 +41,15 @@ const people = [
     age: 23,
   },
 ];
-const youngPeople = people.map((people) => {
-  const youngPeople = people.filter((person) => person.age <= 25);
-});
+// taking array of objects to new array of objects
+// filter first so map is not returning undefined
+const youngPeople = people
+  .filter((people) => people.age <= 25)
+  .map((people) => {
+    return {
+      name: people.firstName + " " + people.lastName,
+      email: people.email,
+    };
+  });
+
 console.log(youngPeople);
