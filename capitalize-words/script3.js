@@ -9,8 +9,8 @@ console.log(capitalizedWords); // ['Coder', 'Programmer', 'Developer']
 ``` */
 const words = ["coder", "programmer", "developer"];
 const capitalizedWords = words.map((word) => {
-  console.log(word.toLowerCase());
+  word.toLowerCase();
   let capFirst = word[0].toUpperCase();
-  shortWord = word.slice(1);
+  let shortWord = word.slice(1);
   console.log(capFirst + shortWord);
 });
