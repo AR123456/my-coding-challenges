@@ -47,7 +47,8 @@ const youngPeople = people
   .filter((people) => people.age <= 25)
   .map((people) => {
     return {
-      name: people.firstName + " " + people.lastName,
+      // name: people.firstName + " " + people.lastName,
+      name: `${people.firstName} ${people.lastName}`,
       email: people.email,
     };
   });
