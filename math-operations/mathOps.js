@@ -17,4 +17,12 @@ console.log(rmOutput); // 31 % 15 = 1
 
 let x = Math.floor(Math.random() * 100);
 let y = Math.floor(Math.random() * 50);
+const sumOutput = () => {
+  return x + y;
+};
+const differenceOutput = () => {
+  return x - y;
+};
 console.log(x, y);
+console.log(sumOutput(x, y));
+console.log(differenceOutput(x, y));
