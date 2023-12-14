@@ -23,6 +23,9 @@ const sumOutput = () => {
 const differenceOutput = () => {
   return x - y;
 };
+const productOutput = () => x * y;
+
 console.log(x, y);
 console.log(sumOutput(x, y));
 console.log(differenceOutput(x, y));
+console.log(productOutput(x, y));
