@@ -16,4 +16,5 @@ console.log(rmOutput); // 31 % 15 = 1
 ``` */
 
 let x = Math.floor(Math.random() * 100);
-console.log(x);
+let y = Math.floor(Math.random() * 50);
+console.log(x, y);
