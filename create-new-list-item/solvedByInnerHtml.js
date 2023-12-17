@@ -1,5 +1,5 @@
 // Challenge add a new list item to the DOM shopping list
-// way one - innerHTML
+// way one - innerHTML - wSolving using InnerHTML - when solving this way the browser needs to parse and recreate all the DOM nodes inside the UL element.  So less efficient than creating new elements and appending them. Also when doing this way HTML will not automatically re attache event handlers to the new elements , so would have to be tracked manually
 // create a function that will take in an item to be added
 
 const createListItem = (item) => {
