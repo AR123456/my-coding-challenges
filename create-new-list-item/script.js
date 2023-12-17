@@ -10,4 +10,7 @@ Street Tacos
   <i class="fa-solid fa-xmark"></i>
 </button>
 </li>`;
-document.createElement(newItem);
+// document.createElement(newItem);
+console.log(newItem);
+
+document.write(newItem);
