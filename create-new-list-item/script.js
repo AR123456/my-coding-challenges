@@ -1,16 +1,12 @@
 // Challenge add a new list item to the DOM shopping list
+// way one - innerHTML
+// create a function that will take in an item to be added
 
-lastItem = document.querySelector("#item-list > li:nth-child(4)");
-console.log(lastItem);
+const createListItem = (item) => {
+  // this will not work because it is not a node, you have to create the element node first
+  const li = `<li>${item}</li>`;
+  document.querySelector(".items").appendChild(li);
+};
 
-// insert this template into the DOM
-let newItem = `<li>
-Street Tacos 
-<button class="remove-item btn-link text-red">
-  <i class="fa-solid fa-xmark"></i>
-</button>
-</li>`;
-// document.createElement(newItem);
-console.log(newItem);
-
-document.write(newItem);
+// call function
+createListItem("Eggs");
