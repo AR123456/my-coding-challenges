@@ -9,11 +9,15 @@ You may think that since there is an `insertBefore()` method, there is also an `
 
 The function will be called like this: */
 
-function insertAfter(newEl, existingEl) {}
+function insertAfter(newEl, existingEl) {
+  console.log(existingEl.parentElement);
+  // take the existing parent and call insert before, pass in the new element and what you want it before, nextSibling puts it after
+  existingEl.parentElement.insertBefore(newEl, existingEl.nextSibling);
+}
 
 // New element to insert
 const li = document.createElement("li");
-li.textContent = "Element being added after";
+li.textContent = "Insert Me After!";
 
 // Existing element to insert after
 const firstItem = document.querySelector("li:first-child");
