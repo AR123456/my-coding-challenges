@@ -12,8 +12,7 @@ The function will be called like this: */
 function insertAfter(newEl, existingEl) {
   existingEl.parentElement.insertBefore(newEl, existingEl.nextSibling);
 }
-newEl = document.createElement("li");
-newEl.textContent = "the new element";
+
 // New element to insert
 const li = document.createElement("li");
 li.textContent = "Insert Me After!";
@@ -21,7 +20,7 @@ li.textContent = "Insert Me After!";
 // Existing element to insert after
 const firstItem = document.querySelector("li:first-child");
 // the next sibling is another li
-// .insertAdjacentElement("afterend",newEl)
-li.insertAdjacentElement("afterend", newEl);
+// .insertAdjacentElement("afterend")
+
 // Our custom function
 insertAfter(li, firstItem);
