@@ -4,4 +4,9 @@
 
 const arr = [2, 3, 4, 6, 6, "hello"];
 let remove = [2, 6];
-function seekAndDestroy() {}
+function seekAndDestroy() {
+  for (let i = 0; i < arr.length; i++) {
+    console.log(i);
+  }
+}
+seekAndDestroy(arr, remove);
