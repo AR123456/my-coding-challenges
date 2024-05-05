@@ -5,8 +5,8 @@
 const arr = [2, 3, 4, 6, 6, "hello"];
 let remove = [2, 6];
 function seekAndDestroy() {
-  for (let i = 0; i < arr.length; i++) {
-    console.log(i);
-  }
+  console.log(arr.indexOf(2));
+  console.log(arr.includes("hello"));
+  console.log(remove.values());
 }
-seekAndDestroy(arr, remove);
+seekAndDestroy(arr);
