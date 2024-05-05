@@ -7,8 +7,10 @@ let remove = [2, 6];
 function seekAndDestroy() {
   console.log(arr);
   console.log(remove);
-  if (arr.includes(remove)) {
-    console.log(arr);
-  }
+  arr.forEach((i) => {
+    if (i === remove.forEach(j)=>return j) {
+      console.log(i);
+    }
+  });
 }
 seekAndDestroy();
