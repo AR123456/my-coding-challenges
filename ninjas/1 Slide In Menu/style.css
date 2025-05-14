@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=VT323&display=swap");
+body {
+  margin: 0;
+  background: #444;
+  font-family: "Poppins";
+}
+li,
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+main {
+  padding: 140px 40px 40px;
+  color: #bbb;
+}
+
+/*   position: fixed;   ///////
+The element is removed from the normal document flow, and no space is created for the element in the page layout. The element is positioned relative to its initial containing block, which is the viewport in the case of visual media. Its final position is determined by the values of top, right, bottom, and left.
+
+This value always creates a new stacking context. In printed documents, the element is placed in the same position on every page. */
+.menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+header {
+  background: #333;
+  display: flex;
+  align-items: center;
+  /* space-between */
+  justify-content: space-between;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  color: #eee;
+}
+nav {
+  background: #222;
+  /* this z- index The z-index CSS property sets the z-order of a positioned element and its descendants or flex items. Overlapping elements with a larger z-index cover those with a smaller one. */
+  z-index: 0;
+  top: 0;
+  padding: 20px;
+  padding-top: 80px;
+  height: 100%;
+  box-sizing: border-box;
+  width: 200px;
+  /* -200 px positions off the page  */
+  left: -200px;
+  position: absolute;
+}
+nav a {
+  color: #fff;
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1.2rem;
+}
+.burger {
+  z-index: 1;
+  display: relative;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.burger span {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: #eee;
+  margin-bottom: 5px;
+}
+/* open state toggle on and off with javascript  */
+nav.open {
+  left: 0;
+}
+.burger.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(10px);
+}
+.burger.open span:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+.burger.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-10px);
+}
+/* transitions */
+nav {
+  transition: left ease-in 0.3s;
+}
+.burger span {
+  transition: all ease-in 0.3s;
+}
