@@ -16,9 +16,11 @@ function validateEmail() {
     // turn check mark green
     tickMark.style.visibility = "visible";
     tickMark.style.color = "green";
-
-    formBox.style.border = "2px solid green";
-
+    if (input.value.length > 0) {
+      input.addEventListener("blur", () => {
+        formBox.style.border = "2px solid green";
+      });
+    }
     // border: 2px solid #777;
     console.log("valid");
   } else {
