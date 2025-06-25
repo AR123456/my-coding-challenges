@@ -2,9 +2,7 @@ const input = document.querySelector("input");
 const tickMark = document.querySelector(".tick");
 const formBox = document.querySelector("form input");
 //  onkeyup run this function
-input.addEventListener("keyup", (e) => {
-  validateEmail(e.key);
-});
+input.addEventListener("keyup", validateEmail);
 
 function validateEmail() {
   const emailRegex =
@@ -16,11 +14,9 @@ function validateEmail() {
     // turn check mark green
     tickMark.style.visibility = "visible";
     tickMark.style.color = "green";
-    if (input.value.length > 0) {
-      input.addEventListener("blur", () => {
-        formBox.style.border = "2px solid green";
-      });
-    }
+    input.style.border = "2px solid green";
+    formBox.style.border = "2px solid green";
+
     // border: 2px solid #777;
     console.log("valid");
   } else {
@@ -36,3 +32,8 @@ function validateEmail() {
 //       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 //     );
 // };
+// Trigger validation on input event
+input.addEventListener("input", validateEmail);
+
+// Check validity when the page loads
+validateEmail();
