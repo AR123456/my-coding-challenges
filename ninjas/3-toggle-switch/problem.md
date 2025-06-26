@@ -9,3 +9,5 @@ https://www.youtube.com/watch?v=9rHiHv4gpU0&list=PL4cUxeGkcC9hhNl8shRf6TIL-dNkpS
 
 Geeks artcle
 https://www.geeksforgeeks.org/how-to-make-a-toggle-button-using-checkbox-and-css/
+
+look at example 2
