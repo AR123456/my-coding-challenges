@@ -1,10 +1,3 @@
-:root {
-  --on: #6948ed;
-  --off: #555;
-  --toggle-width: 80px;
-  --toggle-height: 30px;
-}
-
 *,
 html {
   box-sizing: border-box;
@@ -29,7 +22,7 @@ body {
   border-radius: 50px;
   background-color: white;
 }
-input:checked > .ball {
+input:checked + .switch .ball {
   position: relative;
   top: 3px;
   left: 60px;
