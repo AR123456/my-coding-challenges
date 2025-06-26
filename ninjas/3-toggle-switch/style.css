@@ -19,18 +19,19 @@ body {
   background: #333;
 }
 
-.switch {
-  height: 80px;
-  width: 80px;
-  border: 3px solid yellow;
+label {
+  font-size: 20px;
 }
-input:checked + .switch {
-  background: red;
+.box {
+  margin: 40px;
+  width: 100px;
+  height: 100px;
+  background-color: red;
 }
-/* 
-the toggle switch is centered but the check box is not ?
-make checking the input happen when the toggle div or switch is "checked"
-
-
-
-*/
+/* hide check box */
+#ck-btn {
+  background-color: skyblue;
+}
+#chk-btn:checked + .box {
+  background-color: yellow;
+}
