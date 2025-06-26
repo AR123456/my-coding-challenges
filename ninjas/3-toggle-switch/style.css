@@ -12,3 +12,25 @@ html {
 body {
   background: #333;
 }
+.switch {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  height: 30px;
+  width: 90px;
+  background-color: red;
+  border-radius: 25px;
+}
+.ball {
+  position: relative;
+  top: 3px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50px;
+  background-color: white;
+}
+input:checked > .ball {
+  position: relative;
+  top: 3px;
+  left: 60px;
+}
