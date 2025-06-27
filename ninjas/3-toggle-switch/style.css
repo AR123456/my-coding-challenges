@@ -1,35 +1,51 @@
+:root {
+  --on: #6948ed;
+  --off: #555;
+  --toggle-width: 80px;
+  --toggle-height: 30px;
+}
+
 *,
 html {
   box-sizing: border-box;
 }
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
   background: #333;
 }
-.switch {
-  position: absolute;
-  top: 40%;
-  left: 40%;
-  height: 30px;
-  width: 90px;
-  background-color: #fff;
-  border-radius: 25px;
+
+h2 {
+  color: green;
 }
-.ball {
-  position: relative;
-  top: 3px;
-  left: 3px;
-  height: 25px;
-  width: 25px;
-  border-radius: 50px;
-  background-color: #555;
-  transition: transform 0.3s ease;
+/* https://www.geeksforgeeks.org/how-to-make-a-toggle-button-using-checkbox-and-css/ */
+/* styles for label */
+.label {
+  font-size: 20px;
+  user-select: none;
+  cursor: pointer;
 }
-input:checked + .switch .ball {
-  position: relative;
-  top: 3px;
-  background-color: #6948ed;
-  transform: translate(60px);
+
+/* Creating a 100x100 box with red color */
+.box {
+  margin-top: 40px;
+  width: 100px;
+  height: 100px;
+  background-color: red;
 }
-input {
-  display: none;
+
+/* hiding the checkbox */
+
+#chk-btn {
+  background-color: skyblue;
+}
+
+/* Changing the color of the box 
+        to yellow from red */
+#chk-btn:checked + .box {
+  background-color: yellow;
 }
