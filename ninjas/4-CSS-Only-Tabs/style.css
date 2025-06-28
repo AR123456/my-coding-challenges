@@ -11,8 +11,19 @@ body {
 .tabs {
   width: 600px;
   margin: 100px auto;
+  border: 2px solid black;
 }
 
 /* buttons */
+.buttons {
+  height: 30px;
+  width: 30px;
+  background: blue;
+}
 
 /* panels */
+.panels {
+  height: 40px;
+  width: 40px;
+  background: green;
+}
