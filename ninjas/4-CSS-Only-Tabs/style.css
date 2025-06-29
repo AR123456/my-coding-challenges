@@ -21,11 +21,19 @@ body {
 
 /* buttons */
 .buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  height: 60px;
+  width: 600px;
+  border: 1px solid rgb(47, 0, 255);
+}
+.buttons a {
   height: 60px;
   width: 200px;
   border: 1px solid rgb(47, 0, 255);
 }
-
 /* panels */
 .panels {
   position: absolute;
@@ -35,4 +43,7 @@ body {
   margin: auto;
   background: green;
   border: 1px solid red;
+}
+.inactive {
+  display: none;
 }
