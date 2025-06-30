@@ -11,7 +11,6 @@ body {
 .tabs {
   width: 600px;
   margin: 100px auto;
-  border: 1px solid black;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -26,25 +25,44 @@ body {
   justify-content: flex-start;
   height: 60px;
   width: 600px;
-  border: 1px solid rgb(47, 0, 255);
 }
 .buttons a {
   height: 60px;
   width: 200px;
-  border: 1px solid rgb(47, 0, 255);
+  border: 1px solid black;
 }
 /* panels */
 .panels {
-  position: absolute;
+  /* position: absolute;
   top: 160px;
   height: 200px;
   width: 600px;
   margin: auto;
   background: green;
-  border: 1px solid red;
+  border: 1px solid red; */
 }
 .inactive {
   display: none;
+}
+.active {
+  position: absolute;
+  top: 160px;
+  left: 305px;
+  height: 200px;
+  width: 600px;
+  margin: auto;
+}
+.btn-1 {
+  background-color: #38cc77;
+  height: 200px;
+}
+.btn-2 {
+  background-color: #e03b8b;
+  height: 200px;
+}
+.btn-3 {
+  background-color: #3944f7;
+  height: 200px;
 }
 .p-1 {
   background-color: #38cc77;
