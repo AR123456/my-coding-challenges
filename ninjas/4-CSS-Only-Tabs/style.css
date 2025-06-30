@@ -10,7 +10,6 @@ body {
 }
 .tabs {
   width: 600px;
-
   margin: 100px auto;
   border: 1px solid black;
   display: flex;
@@ -46,4 +45,21 @@ body {
 }
 .inactive {
   display: none;
+}
+.p-1 {
+  background-color: #38cc77;
+  height: 200px;
+  width: 600px;
+}
+
+.p-2 {
+  background-color: #e03b8b;
+  height: 200px;
+  width: 600px;
+}
+
+.p-3 {
+  background-color: #3944f7;
+  height: 200px;
+  width: 600px;
 }
