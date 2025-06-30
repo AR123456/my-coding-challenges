@@ -47,7 +47,7 @@ body {
 .active {
   position: absolute;
   top: 160px;
-  left: 305px;
+  left: 400px;
   height: 200px;
   width: 600px;
   margin: auto;
@@ -56,6 +56,7 @@ body {
   background-color: #38cc77;
   height: 200px;
 }
+
 .btn-2 {
   background-color: #e03b8b;
   height: 200px;
