@@ -8,3 +8,10 @@ body {
   background: #f2f2f2;
   font-family: "Poppins";
 }
+.tabs {
+  width: 600px;
+  margin: 100px auto;
+}
+.buttons {
+  display: flex;
+}
