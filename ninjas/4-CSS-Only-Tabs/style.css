@@ -40,3 +40,7 @@ body {
   padding: 2px 10px;
   display: none;
 }
+/* target selected to find the hashtag  https://developer.mozilla.org/en-US/docs/Web/CSS/:target */
+.panels .panel:target {
+  display: block;
+}
