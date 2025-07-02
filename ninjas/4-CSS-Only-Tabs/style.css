@@ -25,3 +25,11 @@ body {
   border-bottom: 0;
   flex-grow: 1;
 }
+.buttons a:last-child {
+  border-right: 1px solid #ddd;
+}
+.buttons a:active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
