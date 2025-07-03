@@ -1,6 +1,6 @@
 *,
 html {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -12,9 +12,31 @@ body {
   max-width: 960px;
   margin: 0 auto;
 }
-ul {
+/* style menu  */
+nav {
+  /* background: rgb(80, 196, 241); */
+  background: #333;
+}
+nav ul {
   list-style-type: none;
+  padding: 0;
 }
-a {
+nav a {
   text-decoration: none;
+  color: #fff;
+  /* by default take up full width by default */
+  display: block;
+  padding: 10px;
 }
+nav a:hover {
+  background: #555;
+}
+/* flexing  */
+/* media query for mobile  */
+/* only flex when screen width id more that 768 px */
+@media screen and (min-width: 768px) {
+  nav ul {
+    display: flex;
+  }
+}
+/* https://www.youtube.com/watch?v=2plKBskaKfY&list=PL4cUxeGkcC9i3FXJSUfmsNOx8E7u6UuhG&index=7 */
