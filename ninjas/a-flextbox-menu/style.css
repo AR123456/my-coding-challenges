@@ -38,8 +38,8 @@ nav a:hover {
   nav ul {
     display: flex;
   }
-  nav li:nth-child(3) {
-    flex-grow: 1;
+  nav li {
+    flex: 1 1 0;
   }
 }
 /* https://www.youtube.com/watch?v=2plKBskaKfY&list=PL4cUxeGkcC9i3FXJSUfmsNOx8E7u6UuhG&index=7 */
