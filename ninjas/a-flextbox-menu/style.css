@@ -38,7 +38,7 @@ nav a:hover {
   nav ul {
     display: flex;
     /* apply to flex container for the stuff in it */
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
   nav li {
     /* flex: 1 1 0; */
