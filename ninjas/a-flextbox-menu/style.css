@@ -37,9 +37,11 @@ nav a:hover {
 @media screen and (min-width: 768px) {
   nav ul {
     display: flex;
+    /* apply to flex container for the stuff in it */
+    justify-content: center;
   }
   nav li {
-    flex: 1 1 0;
+    /* flex: 1 1 0; */
   }
 }
 /* https://www.youtube.com/watch?v=2plKBskaKfY&list=PL4cUxeGkcC9i3FXJSUfmsNOx8E7u6UuhG&index=7 */
