@@ -39,7 +39,7 @@ nav a:hover {
   nav ul {
     display: flex;
     /* apply to flex container for the stuff in it */
-    justify-content: space-around;
+    justify-content: space-between;
   }
   nav li {
     /* flex: 1 1 0; */
