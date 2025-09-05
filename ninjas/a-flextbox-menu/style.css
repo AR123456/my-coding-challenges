@@ -23,11 +23,11 @@ nav ul {
 }
 nav a {
   text-decoration: none;
+  text-align: center;
   color: #fff;
   /* by default take up full width by default */
   display: block;
   padding: 10px;
-  background: #777;
 }
 nav a:hover {
   background: #555;
@@ -39,10 +39,10 @@ nav a:hover {
   nav ul {
     display: flex;
     /* apply to flex container for the stuff in it */
-    justify-content: space-between;
+    justify-content: flex-start;
   }
   nav li {
-    /* flex: 1 1 0; */
+    flex: 1 1 0;
   }
 }
 /* https://www.youtube.com/watch?v=2plKBskaKfY&list=PL4cUxeGkcC9i3FXJSUfmsNOx8E7u6UuhG&index=7 */
