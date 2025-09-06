@@ -53,7 +53,7 @@ const musicWords = [
 //     "text"
 //   );
 // https://developer.mozilla.org/en-US/docs/Web/API/Element/paste_event
-inputText.addEventListener("paste", (event) => {
+const getInputText = inputText.addEventListener("paste", (event) => {
   const pastedText = event.clipboardData.getData("text");
   console.log(pastedText);
 });
@@ -61,7 +61,8 @@ inputText.addEventListener("paste", (event) => {
 // buttons
 summerButton.addEventListener("click", (event) => {
   event.preventDefault();
-  console.log("clicked");
+  getInputText();
+  console.log(pastedText);
 });
 natureButton.addEventListener("click", (event) => {
   event.preventDefault();
