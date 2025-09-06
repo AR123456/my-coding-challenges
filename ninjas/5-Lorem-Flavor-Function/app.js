@@ -1,5 +1,5 @@
 // buttons, textarea and output
-const inputText = document.querySelector("textarea").innerHTML;
+const inputText = document.querySelector("textarea");
 const textOut = document.querySelector(".text-output");
 const summerButton = document.querySelector("#summer");
 const natureButton = document.querySelector("#nature");
@@ -46,7 +46,22 @@ const musicWords = [
 
 // function to output the text into the output area
 
-// event listener to detect button click on one of the buttons
-summerButton.addEventListener("click", () => {
+// event listener to detect button click on one of the
+// paste area
+inputText.addEventListener("paste", (event) => {
+  console.log(event.clipboardData);
+});
+
+// buttons
+summerButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  console.log("clicked");
+});
+natureButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  console.log("clicked");
+});
+musicButton.addEventListener("click", (event) => {
+  event.preventDefault();
   console.log("clicked");
 });
