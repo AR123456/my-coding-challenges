@@ -49,7 +49,10 @@ const musicWords = [
 // event listener to detect button click on one of the
 // paste area
 inputText.addEventListener("paste", (event) => {
-  console.log(event.clipboardData);
+  const pastedText = (event.clipboardData || window.clipboardData).getData(
+    "text"
+  );
+  console.log(pastedText);
 });
 
 // buttons
