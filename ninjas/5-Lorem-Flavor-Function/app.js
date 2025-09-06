@@ -1,4 +1,9 @@
 // buttons, textarea and output
+const inputText = document.querySelector("textarea").innerHTML;
+const textOut = document.querySelector(".text-output");
+const summerButton = document.querySelector("#summer");
+const natureButton = document.querySelector("#nature");
+const musicButton = document.querySelector("#music");
 
 // flavor arrays
 const summerWords = [
@@ -42,3 +47,6 @@ const musicWords = [
 // function to output the text into the output area
 
 // event listener to detect button click on one of the buttons
+summerButton.addEventListener("click", () => {
+  console.log("clicked");
+});
