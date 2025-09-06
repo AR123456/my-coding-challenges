@@ -48,10 +48,13 @@ const musicWords = [
 
 // event listener to detect button click on one of the
 // paste area
+// inputText.addEventListener("paste", (event) => {
+//   const pastedText = (event.clipboardData || window.clipboardData).getData(
+//     "text"
+//   );
+// https://developer.mozilla.org/en-US/docs/Web/API/Element/paste_event
 inputText.addEventListener("paste", (event) => {
-  const pastedText = (event.clipboardData || window.clipboardData).getData(
-    "text"
-  );
+  const pastedText = event.clipboardData.getData("text");
   console.log(pastedText);
 });
 
