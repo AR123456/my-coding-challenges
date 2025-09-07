@@ -60,13 +60,13 @@ inputText.addEventListener("paste", (event) => {
 // buttons event listeners
 summerButton.addEventListener("click", (event) => {
   event.preventDefault();
-  console.log(pastedText);
+  console.log("summer");
 });
 natureButton.addEventListener("click", (event) => {
   event.preventDefault();
-  console.log("clicked");
+  console.log("nature");
 });
 musicButton.addEventListener("click", (event) => {
   event.preventDefault();
-  console.log("clicked");
+  console.log("music");
 });
