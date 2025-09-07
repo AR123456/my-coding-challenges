@@ -51,16 +51,19 @@ inputText.addEventListener("paste", (event) => {
   let pastedText = (event.clipboardData || window.clipboardData).getData(
     "text"
   );
-  console.log(pastedText);
+  handlePaste(pastedText);
 });
 
 // function to take inputText and the flavor array generate new text replace every 3rd word with random flavor word
-
+function handlePaste(text) {
+  console.log("Pasted text is:", text);
+  textOut.innerHTML = text;
+}
 // function to output the text into the output area
 // buttons event listeners
 summerButton.addEventListener("click", (event) => {
   event.preventDefault();
-  console.log("summer");
+  console.log("summer", pastedText);
 });
 natureButton.addEventListener("click", (event) => {
   event.preventDefault();
