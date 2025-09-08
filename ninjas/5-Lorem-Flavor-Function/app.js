@@ -5,6 +5,7 @@ const summerButton = document.querySelector("#summer");
 const natureButton = document.querySelector("#nature");
 const musicButton = document.querySelector("#music");
 let pastedText = "";
+
 // flavor arrays
 const summerWords = [
   "sunshine",
@@ -57,7 +58,10 @@ inputText.addEventListener("paste", (event) => {
 // buttons event listeners
 summerButton.addEventListener("click", (event) => {
   event.preventDefault();
-  console.log(summerWords, pastedText);
+  // push the pasted text into an array
+  const pasteArr = pastedText.split(" ");
+  console.log(pasteArr);
+
   textOut.innerHTML = pastedText;
 });
 natureButton.addEventListener("click", (event) => {
