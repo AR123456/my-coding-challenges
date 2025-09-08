@@ -59,7 +59,7 @@ inputText.addEventListener("paste", (event) => {
 summerButton.addEventListener("click", (event) => {
   event.preventDefault();
   // push the pasted text into an array
-  const pasteArr = pastedText.split(" ");
+  const pasteArr = pastedText.split(" ").filter(Boolean);
   console.log(pasteArr);
 
   textOut.innerHTML = pastedText;
