@@ -58,6 +58,7 @@ inputText.addEventListener("paste", (event) => {
 summerButton.addEventListener("click", (event) => {
   event.preventDefault();
   console.log(summerWords, pastedText);
+  textOut.innerHTML = pastedText;
 });
 natureButton.addEventListener("click", (event) => {
   event.preventDefault();
