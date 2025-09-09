@@ -49,16 +49,15 @@ const musicWords = [
 // https://developer.mozilla.org/en-US/docs/Web/API/Element/paste_event
 inputText.addEventListener("paste", (event) => {
   pastedText = (event.clipboardData || window.clipboardData).getData("text");
-  console.log("Pasted and stored:", pastedText);
 });
 
 // function to take inputText and the flavor array generate new text replace every 3rd word with random flavor word
 
 // function to output the text into the output area
 // buttons event listeners
-summerButton.addEventListener("click", (event, text) => {
+summerButton.addEventListener("click", (event) => {
   event.preventDefault();
-  console.log("nature", pastedText);
+  console.log(summerWords, pastedText);
 });
 natureButton.addEventListener("click", (event) => {
   event.preventDefault();
