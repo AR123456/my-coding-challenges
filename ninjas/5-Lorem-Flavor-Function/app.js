@@ -4,7 +4,7 @@ const textOut = document.querySelector(".text-output");
 const summerButton = document.querySelector("#summer");
 const natureButton = document.querySelector("#nature");
 const musicButton = document.querySelector("#music");
-
+let pastedText = "";
 // flavor arrays
 const summerWords = [
   "sunshine",
@@ -42,33 +42,33 @@ const musicWords = [
   "concert",
   "violin",
 ];
-// function to take inputText and the flavor array generate new text replace every 3rd word with random flavor word
-
-// function to output the text into the output area
 
 // event listener to detect button click on one of the
 // paste area
-// inputText.addEventListener("paste", (event) => {
-//   const pastedText = (event.clipboardData || window.clipboardData).getData(
-//     "text"
-//   );
-
 //////////////////////// go dev example //////////////
 // https://developer.mozilla.org/en-US/docs/Web/API/Element/paste_event
 inputText.addEventListener("paste", (event) => {
-  const pastedText = event.clipboardData.getData("text");
-  console.log(pastedText);
+  let pastedText = (event.clipboardData || window.clipboardData).getData(
+    "text"
+  );
+  handlePaste(pastedText);
 });
 
-// buttons
-summerButton.addEventListener("click", (event) => {
+// function to take inputText and the flavor array generate new text replace every 3rd word with random flavor word
+function handlePaste(text) {
+  makeSummer(text);
+}
+// function to output the text into the output area
+// buttons event listeners
+const makeSummer = summerButton.addEventListener("click", (event, text) => {
   event.preventDefault();
+  console.log("summer", text, summerWords);
 });
 natureButton.addEventListener("click", (event) => {
   event.preventDefault();
-  console.log("clicked");
+  console.log("nature");
 });
 musicButton.addEventListener("click", (event) => {
   event.preventDefault();
-  console.log("clicked");
+  console.log("music");
 });
