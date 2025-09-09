@@ -4,8 +4,6 @@ const textOut = document.querySelector(".text-output");
 const summerButton = document.querySelector("#summer");
 const natureButton = document.querySelector("#nature");
 const musicButton = document.querySelector("#music");
-let pastedText = "";
-let pasteArr = [];
 
 // flavor arrays
 const summerWords = [
@@ -44,40 +42,33 @@ const musicWords = [
   "concert",
   "violin",
 ];
-
-// event listener to detect button click on one of the
-// paste area
-//////////////////////// go dev example //////////////
-// https://developer.mozilla.org/en-US/docs/Web/API/Element/paste_event
-inputText.addEventListener("paste", (event) => {
-  pastedText = (event.clipboardData || window.clipboardData).getData("text");
-  pasteArr = pastedText.split(" ").filter(Boolean);
-});
-
 // function to take inputText and the flavor array generate new text replace every 3rd word with random flavor word
 
 // function to output the text into the output area
-// buttons event listeners
+
+// event listener to detect button click on one of the
+// paste area
+// inputText.addEventListener("paste", (event) => {
+//   const pastedText = (event.clipboardData || window.clipboardData).getData(
+//     "text"
+//   );
+
+//////////////////////// go dev example //////////////
+// https://developer.mozilla.org/en-US/docs/Web/API/Element/paste_event
+inputText.addEventListener("paste", (event) => {
+  const pastedText = event.clipboardData.getData("text");
+  console.log(pastedText);
+});
+
+// buttons
 summerButton.addEventListener("click", (event) => {
   event.preventDefault();
-  // pasteArr is target
-  // summerWords is source
-  for (let i = 0; i < pasteArr.length; i++) {
-    if ((i + 1) % 3 === 0) {
-      console.log(i);
-    }
-    //
-  }
-
-  console.log(pasteArr);
-
-  textOut.innerHTML = pastedText;
 });
 natureButton.addEventListener("click", (event) => {
   event.preventDefault();
-  console.log("nature");
+  console.log("clicked");
 });
 musicButton.addEventListener("click", (event) => {
   event.preventDefault();
-  console.log("music");
+  console.log("clicked");
 });
