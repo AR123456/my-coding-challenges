@@ -48,22 +48,17 @@ const musicWords = [
 //////////////////////// go dev example //////////////
 // https://developer.mozilla.org/en-US/docs/Web/API/Element/paste_event
 inputText.addEventListener("paste", (event) => {
-  let pastedText = (event.clipboardData || window.clipboardData).getData(
-    "text"
-  );
-  handlePaste(pastedText);
+  pastedText = (event.clipboardData || window.clipboardData).getData("text");
+  console.log("Pasted and stored:", pastedText);
 });
 
 // function to take inputText and the flavor array generate new text replace every 3rd word with random flavor word
-function handlePaste(text) {
-  console.log("in the handle paste function", text);
-}
+
 // function to output the text into the output area
 // buttons event listeners
 summerButton.addEventListener("click", (event, text) => {
   event.preventDefault();
-  console.log("nature");
-  handlePaste();
+  console.log("nature", pastedText);
 });
 natureButton.addEventListener("click", (event) => {
   event.preventDefault();
