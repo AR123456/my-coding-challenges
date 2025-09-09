@@ -55,14 +55,16 @@ inputText.addEventListener("paste", (event) => {
 });
 
 // function to take inputText and the flavor array generate new text replace every 3rd word with random flavor word
-function handlePaste(text) {
-  makeSummer(text);
-}
+// function handlePaste(text) {
+//   console.log("in the handle paste function", text);
+// }
 // function to output the text into the output area
 // buttons event listeners
-const makeSummer = summerButton.addEventListener("click", (event, text) => {
+summerButton.addEventListener("click", (event, text) => {
   event.preventDefault();
-  console.log("summer", text, summerWords);
+  function handlePaste(text) {
+    console.log("in the handle paste function", text);
+  }
 });
 natureButton.addEventListener("click", (event) => {
   event.preventDefault();
