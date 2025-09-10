@@ -56,8 +56,14 @@ inputText.addEventListener("paste", (event) => {
 // function to output the text into the output area
 // buttons event listeners
 summerButton.addEventListener("click", (event) => {
-  event.preventDefault();
-  console.log(summerWords, pastedText);
+  // event.preventDefault();
+  // console.log(summerWords, pastedText);
+  if (pastedText) {
+    console.log("Using stored pasted text:", pastedText);
+    // do something with pastedText here
+  } else {
+    console.log("Nothing has been pasted yet!");
+  }
 });
 natureButton.addEventListener("click", (event) => {
   event.preventDefault();
