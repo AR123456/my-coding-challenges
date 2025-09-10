@@ -66,14 +66,12 @@ summerButton.addEventListener("click", (event) => {
     if ((i + 1) % 3 === 0) {
       // random index of sourceArr
       const randomFlavor = Math.floor(Math.random() * summerWords.length);
-      console.log(randomFlavor);
+      pasteArr[i] = summerWords[randomFlavor];
     }
-    //
+    console.log(pasteArr);
   }
 
-  console.log(pasteArr);
-
-  textOut.innerHTML = pastedText;
+  textOut.innerHTML = pasteArr;
 });
 natureButton.addEventListener("click", (event) => {
   event.preventDefault();
