@@ -5,6 +5,8 @@ const summerButton = document.querySelector("#summer");
 const natureButton = document.querySelector("#nature");
 const musicButton = document.querySelector("#music");
 let pastedText = "";
+let pasteArr = [];
+
 // flavor arrays
 const summerWords = [
   "sunshine",
@@ -49,6 +51,7 @@ const musicWords = [
 // https://developer.mozilla.org/en-US/docs/Web/API/Element/paste_event
 inputText.addEventListener("paste", (event) => {
   pastedText = (event.clipboardData || window.clipboardData).getData("text");
+  pasteArr = pastedText.split(" ").filter(Boolean);
 });
 
 // function to take inputText and the flavor array generate new text replace every 3rd word with random flavor word
@@ -56,14 +59,19 @@ inputText.addEventListener("paste", (event) => {
 // function to output the text into the output area
 // buttons event listeners
 summerButton.addEventListener("click", (event) => {
-  // event.preventDefault();
-  // console.log(summerWords, pastedText);
-  if (pastedText) {
-    console.log("Using stored pasted text:", pastedText);
-    // do something with pastedText here
-  } else {
-    console.log("Nothing has been pasted yet!");
+  event.preventDefault();
+  // pasteArr is target
+  // summerWords is source
+  for (let i = 0; i < pasteArr.length; i++) {
+    if ((i + 1) % 3 === 0) {
+      // random index of sourceArr
+    }
+    //
   }
+
+  console.log(pasteArr);
+
+  textOut.innerHTML = pastedText;
 });
 natureButton.addEventListener("click", (event) => {
   event.preventDefault();
