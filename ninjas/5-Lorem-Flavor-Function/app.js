@@ -76,17 +76,18 @@ summerButton.addEventListener("click", (event) => {
 natureButton.addEventListener("click", (event) => {
   event.preventDefault();
   // example.js
-  const targetArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  const sourceArray = ["A", "B", "C", "D", "E"];
-  for (let i = 0; i < targetArray.length; i++) {
+  // const pasteArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  // const summerWords = ["A", "B", "C", "D", "E"];
+  for (let i = 0; i < pasteArr.length; i++) {
     if ((i + 1) % 3 === 0) {
       // Get a random index from the sourceArray
-      const randomIndex = Math.floor(Math.random() * sourceArray.length);
+      const randomIndex = Math.floor(Math.random() * natureWords.length);
       // Replace the element in targetArray
-      targetArray[i] = sourceArray[randomIndex];
+      pasteArr[i] = natureWords[randomIndex];
     }
   }
-  console.log(targetArray);
+  console.log(pasteArr);
+  textOut.innerHTML = pasteArr;
 });
 musicButton.addEventListener("click", (event) => {
   event.preventDefault();
