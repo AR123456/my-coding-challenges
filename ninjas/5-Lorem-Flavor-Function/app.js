@@ -65,6 +65,8 @@ summerButton.addEventListener("click", (event) => {
   for (let i = 0; i < pasteArr.length; i++) {
     if ((i + 1) % 3 === 0) {
       // random index of sourceArr
+      const randomFlavor = Math.floor(Math.random() * summerWords.length);
+      console.log(randomFlavor);
     }
     //
   }
