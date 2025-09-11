@@ -63,7 +63,8 @@ const addFlavor = (pasteArr, targetArray) => {
     }
   }
 
-  textOut.innerHTML = pasteArr;
+  textOut.textContent = pasteArr;
+  textOut.className = "text-output";
 };
 // function to output the text into the output area
 // buttons event listeners
