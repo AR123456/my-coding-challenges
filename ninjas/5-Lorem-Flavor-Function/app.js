@@ -60,11 +60,8 @@ inputText.addEventListener("paste", (event) => {
 // buttons event listeners
 summerButton.addEventListener("click", (event) => {
   event.preventDefault();
-  // pasteArr is target
-  // summerWords is source
   for (let i = 0; i < pasteArr.length; i++) {
     if ((i + 1) % 3 === 0) {
-      // random index of sourceArr
       const randomFlavor = Math.floor(Math.random() * summerWords.length);
       pasteArr[i] = summerWords[randomFlavor];
     }
@@ -72,20 +69,15 @@ summerButton.addEventListener("click", (event) => {
 
   textOut.innerHTML = pasteArr;
 });
+// nature
 natureButton.addEventListener("click", (event) => {
   event.preventDefault();
-  // example.js
-  // const pasteArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  // const summerWords = ["A", "B", "C", "D", "E"];
   for (let i = 0; i < pasteArr.length; i++) {
     if ((i + 1) % 3 === 0) {
-      // Get a random index from the sourceArray
       const randomIndex = Math.floor(Math.random() * natureWords.length);
-      // Replace the element in targetArray
       pasteArr[i] = natureWords[randomIndex];
     }
   }
-
   textOut.innerHTML = pasteArr;
 });
 musicButton.addEventListener("click", (event) => {
