@@ -82,7 +82,13 @@ natureButton.addEventListener("click", (event) => {
 });
 musicButton.addEventListener("click", (event) => {
   event.preventDefault();
-  console.log("music");
+  for (let i = 0; i < pasteArr.length; i++) {
+    if ((i + 1) % 3 === 0) {
+      const randomIndex = Math.floor(Math.random() * musicWords.length);
+      pasteArr[i] = musicWords[randomIndex];
+    }
+  }
+  textOut.innerHTML = pasteArr;
 });
 
 // example js
