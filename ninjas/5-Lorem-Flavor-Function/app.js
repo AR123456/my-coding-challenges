@@ -62,43 +62,21 @@ const addFlavor = (pasteArr, targetArray) => {
       pasteArr[i] = targetArray[randomFlavor];
     }
   }
-
-  textOut.innerHTML = pasteArr;
+  textOut.textContent = pasteArr;
 };
-// function to output the text into the output area
-// buttons event listeners
+
 summerButton.addEventListener("click", (event) => {
   event.preventDefault();
-  // for (let i = 0; i < pasteArr.length; i++) {
-  //   if ((i + 1) % 3 === 0) {
-  //     const randomFlavor = Math.floor(Math.random() * summerWords.length);
-  //     pasteArr[i] = summerWords[randomFlavor];
-  //   }
-  // }
-
-  // textOut.innerHTML = pasteArr;
   addFlavor(pasteArr, summerWords);
 });
 // nature
 natureButton.addEventListener("click", (event) => {
   event.preventDefault();
-  for (let i = 0; i < pasteArr.length; i++) {
-    if ((i + 1) % 3 === 0) {
-      const randomIndex = Math.floor(Math.random() * natureWords.length);
-      pasteArr[i] = natureWords[randomIndex];
-    }
-  }
-  textOut.innerHTML = pasteArr;
+  addFlavor(pasteArr, natureWords);
 });
 musicButton.addEventListener("click", (event) => {
   event.preventDefault();
-  for (let i = 0; i < pasteArr.length; i++) {
-    if ((i + 1) % 3 === 0) {
-      const randomIndex = Math.floor(Math.random() * musicWords.length);
-      pasteArr[i] = musicWords[randomIndex];
-    }
-  }
-  textOut.innerHTML = pasteArr;
+  addFlavor(pasteArr, musicWords);
 });
 
 // example js
