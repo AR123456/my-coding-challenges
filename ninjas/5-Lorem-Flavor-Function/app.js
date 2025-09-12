@@ -64,9 +64,10 @@ const addFlavor = (pasteArr, targetArray) => {
   }
 
   textOut.textContent = pasteArr;
-  textOut.className = "text-output";
-  textOut.style.fontSize = "20px";
-  textOut.style.textAlign = "center";
+
+  textOut.style.height = "10rem";
+  textOut.style.width = "20rem";
+  textOut.style.textWrap = "pretty";
 };
 // function to output the text into the output area
 // buttons event listeners
