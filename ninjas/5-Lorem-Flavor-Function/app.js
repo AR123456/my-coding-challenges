@@ -63,27 +63,42 @@ const addFlavor = (pasteArr, targetArray) => {
     }
   }
 
-  textOut.textContent = pasteArr;
-
-  textOut.style.height = "10rem";
-  textOut.style.width = "20rem";
-  textOut.style.textWrap = "pretty";
+  textOut.innerHTML = pasteArr;
 };
 // function to output the text into the output area
 // buttons event listeners
 summerButton.addEventListener("click", (event) => {
   event.preventDefault();
+  // for (let i = 0; i < pasteArr.length; i++) {
+  //   if ((i + 1) % 3 === 0) {
+  //     const randomFlavor = Math.floor(Math.random() * summerWords.length);
+  //     pasteArr[i] = summerWords[randomFlavor];
+  //   }
+  // }
 
+  // textOut.innerHTML = pasteArr;
   addFlavor(pasteArr, summerWords);
 });
 // nature
 natureButton.addEventListener("click", (event) => {
   event.preventDefault();
-  addFlavor(pasteArr, natureWords);
+  for (let i = 0; i < pasteArr.length; i++) {
+    if ((i + 1) % 3 === 0) {
+      const randomIndex = Math.floor(Math.random() * natureWords.length);
+      pasteArr[i] = natureWords[randomIndex];
+    }
+  }
+  textOut.innerHTML = pasteArr;
 });
 musicButton.addEventListener("click", (event) => {
   event.preventDefault();
-  addFlavor(pasteArr, musicWords);
+  for (let i = 0; i < pasteArr.length; i++) {
+    if ((i + 1) % 3 === 0) {
+      const randomIndex = Math.floor(Math.random() * musicWords.length);
+      pasteArr[i] = musicWords[randomIndex];
+    }
+  }
+  textOut.innerHTML = pasteArr;
 });
 
 // example js
