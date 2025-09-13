@@ -27,9 +27,12 @@ textarea {
 }
 .text-output {
   margin-top: 1rem;
-
   height: 10rem;
   width: 20rem;
   background: #fff;
   border-radius: 25px;
+  overflow: auto; /* adds scroll if needed */
+  white-space: pre-wrap; /* preserves spacing and wraps lines */
+  word-wrap: break-word; /* forces long words to break */
+  padding: 0.5rem; /* a little breathing room */
 }
