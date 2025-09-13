@@ -62,7 +62,7 @@ const addFlavor = (pasteArr, targetArray) => {
       pasteArr[i] = targetArray[randomFlavor];
     }
   }
-  textOut.textContent = pasteArr;
+  textOut.textContent = pasteArr.join(" ");
 };
 
 summerButton.addEventListener("click", (event) => {
