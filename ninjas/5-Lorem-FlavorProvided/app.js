@@ -75,6 +75,7 @@ const addFlavor = (pasteArr, targetArray) => {
 buttons.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     e.preventDefault();
-    console.log(btn);
+    console.log(e.target.dataset);
+    // addFlavor(pasteArr, buttonsDataFlavorTargetArray);
   });
 });
