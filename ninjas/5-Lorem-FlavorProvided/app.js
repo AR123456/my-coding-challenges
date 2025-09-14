@@ -1,9 +1,8 @@
 // buttons, textarea and output
 const inputText = document.querySelector("textarea");
 const textOut = document.querySelector(".text-output");
-const summerButton = document.querySelector("#summer");
-const natureButton = document.querySelector("#nature");
-const musicButton = document.querySelector("#music");
+// using query selector all for buttons
+const buttons = document.querySelectorAll("button");
 let pastedText = "";
 let pasteArr = [];
 
