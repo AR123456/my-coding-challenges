@@ -59,16 +59,22 @@ const addFlavor = (pasteArr, targetArray) => {
   textOut.textContent = pasteArr.join(" ");
 };
 
-summerButton.addEventListener("click", (event) => {
-  event.preventDefault();
-  addFlavor(pasteArr, summerWords);
-});
+// summerButton.addEventListener("click", (event) => {
+//   event.preventDefault();
+//   addFlavor(pasteArr, summerWords);
+// });
 
-natureButton.addEventListener("click", (event) => {
-  event.preventDefault();
-  addFlavor(pasteArr, natureWords);
-});
-musicButton.addEventListener("click", (event) => {
-  event.preventDefault();
-  addFlavor(pasteArr, musicWords);
+// natureButton.addEventListener("click", (event) => {
+//   event.preventDefault();
+//   addFlavor(pasteArr, natureWords);
+// });
+// musicButton.addEventListener("click", (event) => {
+//   event.preventDefault();
+//   addFlavor(pasteArr, musicWords);
+// });
+buttons.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log(btn);
+  });
 });
