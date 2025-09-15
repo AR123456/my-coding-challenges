@@ -3,8 +3,8 @@ const inputText = document.querySelector("textarea");
 const textOut = document.querySelector(".text-output");
 // using query selector all for buttons
 const buttons = document.querySelectorAll("button");
-let pastedText = "";
-let pasteArr = [];
+// let pastedText = "";
+// let pasteArr = [];
 
 // flavor arrays
 const summerWords = [
