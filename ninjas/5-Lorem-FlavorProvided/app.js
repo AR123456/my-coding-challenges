@@ -3,47 +3,7 @@ const inputText = document.querySelector("textarea");
 const textOut = document.querySelector(".text-output");
 // using query selector all for buttons
 const buttons = document.querySelectorAll("button");
-// let pastedText = "";
-// let pasteArr = [];
 
-// flavor arrays
-// const summerWords = [
-//   "sunshine",
-//   "beach",
-//   "icecream",
-//   "sandals",
-//   "picnic",
-//   "swim",
-//   "campfire",
-//   "vacation",
-//   "hammock",
-//   "lemonade",
-// ];
-// const natureWords = [
-//   "forest",
-//   "river",
-//   "mountain",
-//   "meadow",
-//   "breeze",
-//   "wildflower",
-//   "rain",
-//   "stone",
-//   "tree",
-//   "sunrise",
-// ];
-// const musicWords = [
-//   "melody",
-//   "rhythm",
-//   "chorus",
-//   "guitar",
-//   "piano",
-//   "drums",
-//   "harmony",
-//   "lyrics",
-//   "concert",
-//   "violin",
-// ];
-// object of arrays instead
 const flavors = {
   summerWords: [
     "sunshine",
@@ -86,6 +46,7 @@ const flavors = {
 inputText.addEventListener("paste", (event) => {
   pastedText = (event.clipboardData || window.clipboardData).getData("text");
   pasteArr = pastedText.split(" ").filter(Boolean);
+  console.log(pasteArr);
 });
 
 const addFlavor = (pasteArr, targetArray) => {
