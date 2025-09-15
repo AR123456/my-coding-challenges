@@ -77,6 +77,7 @@ buttons.forEach((btn) => {
     e.preventDefault();
     // console.log(e.target.dataset.flavor);
     let target = e.target.dataset.flavor;
+    console.log(typeof target);
     addFlavor(pasteArr, target);
   });
 });
