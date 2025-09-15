@@ -7,42 +7,81 @@ const buttons = document.querySelectorAll("button");
 // let pasteArr = [];
 
 // flavor arrays
-const summerWords = [
-  "sunshine",
-  "beach",
-  "icecream",
-  "sandals",
-  "picnic",
-  "swim",
-  "campfire",
-  "vacation",
-  "hammock",
-  "lemonade",
-];
-const natureWords = [
-  "forest",
-  "river",
-  "mountain",
-  "meadow",
-  "breeze",
-  "wildflower",
-  "rain",
-  "stone",
-  "tree",
-  "sunrise",
-];
-const musicWords = [
-  "melody",
-  "rhythm",
-  "chorus",
-  "guitar",
-  "piano",
-  "drums",
-  "harmony",
-  "lyrics",
-  "concert",
-  "violin",
-];
+// const summerWords = [
+//   "sunshine",
+//   "beach",
+//   "icecream",
+//   "sandals",
+//   "picnic",
+//   "swim",
+//   "campfire",
+//   "vacation",
+//   "hammock",
+//   "lemonade",
+// ];
+// const natureWords = [
+//   "forest",
+//   "river",
+//   "mountain",
+//   "meadow",
+//   "breeze",
+//   "wildflower",
+//   "rain",
+//   "stone",
+//   "tree",
+//   "sunrise",
+// ];
+// const musicWords = [
+//   "melody",
+//   "rhythm",
+//   "chorus",
+//   "guitar",
+//   "piano",
+//   "drums",
+//   "harmony",
+//   "lyrics",
+//   "concert",
+//   "violin",
+// ];
+// object of arrays instead
+const flavors = {
+  summerWords: [
+    "sunshine",
+    "beach",
+    "icecream",
+    "sandals",
+    "picnic",
+    "swim",
+    "campfire",
+    "vacation",
+    "hammock",
+    "lemonade",
+  ],
+  natureWords: [
+    "forest",
+    "river",
+    "mountain",
+    "meadow",
+    "breeze",
+    "wildflower",
+    "rain",
+    "stone",
+    "tree",
+    "sunrise",
+  ],
+  musicWords: [
+    "melody",
+    "rhythm",
+    "chorus",
+    "guitar",
+    "piano",
+    "drums",
+    "harmony",
+    "lyrics",
+    "concert",
+    "violin",
+  ],
+};
 // paste event
 inputText.addEventListener("paste", (event) => {
   pastedText = (event.clipboardData || window.clipboardData).getData("text");
