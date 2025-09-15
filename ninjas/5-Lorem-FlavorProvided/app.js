@@ -59,25 +59,12 @@ const addFlavor = (pasteArr, targetArray) => {
   textOut.textContent = pasteArr.join(" ");
 };
 
-// summerButton.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   addFlavor(pasteArr, summerWords);
-// });
-
-// natureButton.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   addFlavor(pasteArr, natureWords);
-// });
-// musicButton.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   addFlavor(pasteArr, musicWords);
-// });
 buttons.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     e.preventDefault();
     // console.log(e.target.dataset.flavor);
     let target = e.target.dataset.flavor;
-    console.log(typeof target);
+    console.log(pasteArr, target);
     addFlavor(pasteArr, target);
   });
 });
