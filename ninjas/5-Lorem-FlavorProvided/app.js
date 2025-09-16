@@ -63,8 +63,8 @@ buttons.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     e.preventDefault();
     // console.log(e.target.dataset.flavor);
-    let target = e.target.dataset.flavor;
-    console.log(pasteArr, target);
-    addFlavor(pasteArr, target);
+    let f = e.target.dataset.flavor;
+    console.log(pasteArr, f);
+    addFlavor(pasteArr, flavors[f]);
   });
 });
