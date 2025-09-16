@@ -1,7 +1,6 @@
 // buttons, textarea and output
 const inputText = document.querySelector("textarea");
 const textOut = document.querySelector(".text-output");
-// using query selector all for buttons
 const buttons = document.querySelectorAll("button");
 
 const flavors = {
@@ -46,7 +45,6 @@ const flavors = {
 inputText.addEventListener("paste", (event) => {
   pastedText = (event.clipboardData || window.clipboardData).getData("text");
   pasteArr = pastedText.split(" ").filter(Boolean);
-  console.log(pasteArr);
 });
 
 const addFlavor = (pasteArr, targetArray) => {
@@ -62,9 +60,7 @@ const addFlavor = (pasteArr, targetArray) => {
 buttons.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     e.preventDefault();
-    // console.log(e.target.dataset.flavor);
     let f = e.target.dataset.flavor;
-    console.log(pasteArr, f);
     addFlavor(pasteArr, flavors[f]);
   });
 });
