@@ -1,12 +1,24 @@
-*{
-box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-body{
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-overflow: hidden;
-height: 100vh;
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
 }
-.
+.log-in-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+}
+input {
+  margin: 0.5rem;
+  border-radius: 25px;
+  height: 3rem;
+}
