@@ -24,10 +24,7 @@ input {
   height: 3rem;
   width: 15rem;
 }
-.eyes {
-  /* height: 80px;
-  width: 80px; */
-}
+
 .hide {
   display: none;
 }
