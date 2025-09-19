@@ -4,19 +4,19 @@ const password = document.querySelector("#password");
 const hide = document.querySelector(".hide");
 
 const toggleEyes = () => {
-  let open = document.getElementsByClassName("open");
-  if (open.style.display === "inline") {
-    open.style.display === "hidden";
+  let closed = document.querySelector(".closed");
+  if (closed.style.display === "inline") {
+    closed.style.display === "hidden";
   } else {
-    open.style.display = "inline";
+    closed.style.display === "inline";
   }
 };
 password.addEventListener("focus", () => {
   password.detectInput = addEventListener("input", (event) => {
     console.log("close your eyes");
+    toggleEyes();
   });
 });
 password.addEventListener("blur", () => {
   console.log("open you eyes");
-  toggleEyes();
 });
