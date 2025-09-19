@@ -4,9 +4,9 @@ const password = document.querySelector("#password");
 
 password.addEventListener("focus", () => {
   password.detectInput = addEventListener("input", (event) => {
-    console.log(password.value);
+    console.log("close your eyes");
   });
 });
 password.addEventListener("blur", () => {
-  console.log("out");
+  console.log("open you eyes");
 });
