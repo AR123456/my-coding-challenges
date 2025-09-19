@@ -4,7 +4,12 @@ const password = document.querySelector("#password");
 const hide = document.querySelector(".hide");
 
 const toggleEyes = () => {
-  eyes.style.display === "none";
+  let open = document.getElementsByClassName("open");
+  if (open.style.display === "inline") {
+    open.style.display === "hidden";
+  } else {
+    open.style.display = "inline";
+  }
 };
 password.addEventListener("focus", () => {
   password.detectInput = addEventListener("input", (event) => {
