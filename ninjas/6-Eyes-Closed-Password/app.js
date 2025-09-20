@@ -12,11 +12,9 @@ const setEyesClosed = (closed) => {
     closedImg.style.display = "none";
   }
 };
-password.addEventListener("focus", () => {
-  password.detectInput = addEventListener("input", (event) => {
-    console.log("input -> keep them closed");
-    setEyesClosed(true);
-  });
+password.detectInput = addEventListener("input", (event) => {
+  console.log("input -> keep them closed");
+  setEyesClosed(true);
 });
 password.addEventListener("blur", () => {
   console.log("blur -> open your eyes");
