@@ -14,10 +14,11 @@ const setEyesClosed = (closed) => {
 };
 password.addEventListener("focus", () => {
   password.detectInput = addEventListener("input", (event) => {
-    console.log("close your eyes");
-    setEyesClosed();
+    console.log("input -> keep them closed");
+    setEyesClosed(true);
   });
 });
 password.addEventListener("blur", () => {
-  console.log("open you eyes");
+  console.log("blur -> open your eyes");
+  setEyesClosed(false);
 });
