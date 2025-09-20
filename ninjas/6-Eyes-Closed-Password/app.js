@@ -1,16 +1,10 @@
 const eyes = document.querySelector(".eyes");
 const userName = document.querySelector("#user-name");
 const password = document.querySelector("#password");
-const hide = document.querySelector(".hide");
+const openImg = document.querySelector(".eyes.open img");
+const closedImg = document.querySelector(".eyes.closed img");
 
-const toggleEyes = () => {
-  let closed = document.querySelector(".closed");
-  if (closed.style.display === "inline") {
-    closed.style.display === "hidden";
-  } else {
-    closed.style.display === "inline";
-  }
-};
+const setEyesClosed = (closed) => {};
 password.addEventListener("focus", () => {
   password.detectInput = addEventListener("input", (event) => {
     console.log("close your eyes");
