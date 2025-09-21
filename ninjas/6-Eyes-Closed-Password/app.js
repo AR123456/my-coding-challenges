@@ -1,23 +1,24 @@
-const eyes = document.querySelector(".eyes");
 const userName = document.querySelector("#user-name");
 const password = document.querySelector("#password");
 const openImg = document.querySelector(".eyes.open img");
 const closedImg = document.querySelector(".eyes.closed img");
 
-const toggleEyes = () => {
-  let closed = document.querySelector(".closed");
-  if (closed.style.display === "inline") {
-    closed.style.display = "none";
+const setEyesClosed = (closed) => {
+  if (closed) {
+    openImg.style.display = "none";
+    closedImg.style.display = "inline";
   } else {
-    closed.style.display = "inline";
+    openImg.style.display = "inline";
+    closedImg.style.display = "none";
   }
 };
-password.addEventListener("focus", () => {
-  password.detectInput = addEventListener("input", (event) => {
-    console.log("close your eyes");
-    toggleEyes();
-  });
+
+password.addEventListener("input", (event) => {
+  console.log("input -> keep them closed");
+  setEyesClosed(true);
 });
+
 password.addEventListener("blur", () => {
-  console.log("open you eyes");
+  console.log("blur -> open your eyes");
+  setEyesClosed(false);
 });
