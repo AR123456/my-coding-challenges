@@ -25,6 +25,6 @@ input {
   width: 15rem;
 }
 
-.hidden {
-  display: none !important;
+.hide {
+  display: none;
 }
