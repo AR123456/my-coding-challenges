@@ -24,7 +24,3 @@ input {
   height: 3rem;
   width: 15rem;
 }
-
-.hidden {
-  display: none !important;
-}
