@@ -34,3 +34,6 @@ form img.open {
 form img.closed {
   display: none;
 }
+form:has(input[type="password"]:valid:focus) img.open {
+  display: none;
+}
