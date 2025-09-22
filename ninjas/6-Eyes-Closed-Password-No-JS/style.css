@@ -24,3 +24,13 @@ input {
   height: 3rem;
   width: 15rem;
 }
+form img {
+  width: 200px;
+  margin: 0 auto;
+}
+form img.open {
+  display: block;
+}
+form img.closed {
+  display: none;
+}
