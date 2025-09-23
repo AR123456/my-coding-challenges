@@ -19,7 +19,11 @@ body {
   outline: 1px solid red;
 }
 .card {
-  height: 10rem;
-  width: 40rem;
+  display: inline-block;
+  text-align: left;
+  height: 30px;
+  line-height: 30px;
+
+  overflow: hidden;
   outline: 1px solid blue;
 }
