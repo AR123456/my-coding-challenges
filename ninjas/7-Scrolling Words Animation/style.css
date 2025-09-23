@@ -23,19 +23,3 @@ body {
   width: 40rem;
   outline: 1px solid blue;
 }
-p {
-  animation-duration: 3s;
-  animation-name: slide-in;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-}
-@keyframes slide-in {
-  from {
-    translate: 150vw 0;
-    scale: 200% 1;
-  }
-  to {
-    translate: 0 0;
-    scale: 100% 1;
-  }
-}
