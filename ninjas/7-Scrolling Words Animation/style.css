@@ -27,3 +27,10 @@ body {
   overflow: hidden;
   outline: 1px solid blue;
 }
+.roll {
+  display: block;
+}
+.word-list {
+  position: relative;
+  animation: cycle ease 5s infinite;
+}
