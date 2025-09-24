@@ -1,15 +1,15 @@
 * {
   box-sizing: border-box;
 }
-body {
+/* body {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   height: 100vh;
-}
-.container {
+} */
+/* .container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,6 +33,12 @@ body {
 .word-list {
   position: relative;
   animation: cycle ease 5s infinite;
+} */
+body {
+  text-align: center;
+}
+h1 {
+  margin: 20px 0;
 }
 @keyframes cycle {
   0% {
