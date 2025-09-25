@@ -10,19 +10,25 @@ body {
 h1 {
   margin: 20px 0;
 }
-section > div {
+section {
+  position: relative;
   display: inline-block;
-  text-align: left;
+  /* text-align: left; */
   height: 30px;
   line-height: 30px;
   overflow: hidden;
 }
-div.word-list span {
-  display: block;
+word-list {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease-in-out;
 }
-div.word-list {
-  position: relative;
-  animation: cycle ease 5s infinite;
+.word-list span {
+  height: 30px;
+  display: block;
 }
 @keyframes cycle {
   0% {
