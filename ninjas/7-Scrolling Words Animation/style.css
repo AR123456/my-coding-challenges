@@ -54,6 +54,10 @@ section > div {
 div.word-list span {
   display: block;
 }
+div.word-list {
+  position: relative;
+  animation: cycle ease 5s infinite;
+}
 @keyframes cycle {
   0% {
     top: 0;
