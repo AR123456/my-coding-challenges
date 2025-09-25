@@ -40,6 +40,13 @@ body {
 h1 {
   margin: 20px 0;
 }
+section > div {
+  text-align: left;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+}
+
 @keyframes cycle {
   0% {
     top: 0;
