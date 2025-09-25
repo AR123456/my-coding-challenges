@@ -34,6 +34,10 @@
   position: relative;
   animation: cycle ease 5s infinite;
 } */
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
   text-align: center;
 }
@@ -41,12 +45,15 @@ h1 {
   margin: 20px 0;
 }
 section > div {
+  display: inline-block;
   text-align: left;
   height: 30px;
   line-height: 30px;
   overflow: hidden;
 }
-
+div.word-list span {
+  display: block;
+}
 @keyframes cycle {
   0% {
     top: 0;
