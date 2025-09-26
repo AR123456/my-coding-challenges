@@ -4,96 +4,81 @@
   padding: 0;
 }
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
-    Arial;
   text-align: center;
-  padding: 24px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
 h1 {
-  margin-bottom: 18px;
-  font-size: 1.25rem;
+  margin: 20px 0;
 }
-
-/* container (label + rolling words) */
-section.learn-row {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.label {
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-/* rolling frame */
-.rolling {
-  --item-height: 30px; /* fallback height */
-  --items: 5; /* will be overwritten by JS */
-  --duration-per-item: 2s; /* how long each word is shown */
-  overflow: hidden;
-  height: var(--item-height);
+section {
+  position: relative;
   display: inline-block;
-  vertical-align: middle;
+  /* text-align: left; */
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
 }
-
-/* the list: animate with steps(number-of-items) */
-.word-list {
+word-list {
   display: flex;
   flex-direction: column;
-  transform: translateY(0);
-  /* total duration = items * duration-per-item */
-  animation: roll calc(var(--items) * var(--duration-per-item))
-    steps(var(--items)) infinite;
-  will-change: transform;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease-in-out;
 }
-
-@keyframes roll {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(calc(-1 * var(--items) * var(--item-height)));
-  }
-}
-
-/* pause on hover */
-.rolling:hover .word-list,
-.rolling:focus-within .word-list {
-  animation-play-state: paused;
-}
-
-/* styling each word */
 .word-list span {
-  height: var(--item-height);
-  line-height: var(--item-height);
+  height: 30px;
   display: block;
-  padding: 0 6px;
-  text-align: left;
-  white-space: nowrap;
 }
+/* @keyframes cycle {
+  0% {
+    top: 0;
+  }
+  10% {
+    top: 0;
+  }
+  20% {
+    top: -30px;
+  }
+  30% {
+    top: -30px;
+  }
+  40% {
+    top: -60px;
+  }
+  50% {
+    top: -60px;
+  }
+  60% {
+    top: -90px;
+  }
+  70% {
+    top: -90px;
+  }
+  80% {
+    top: -120px;
+  }
+  90% {
+    top: -120px;
+  }
+  100% {
+    top: 0px;
+  }
+} */
 
-/* explicit color classes (more robust than nth-child if we clone) */
-.c1 {
+/* colors */
+span:nth-child(1) {
   color: #ff4258;
 }
-.c2 {
+span:nth-child(2) {
   color: #72ff7a;
 }
-.c3 {
+span:nth-child(3) {
   color: #f7f76f;
 }
-.c4 {
+span:nth-child(4) {
   color: #9759fa;
 }
-.c5 {
+span:nth-child(5) {
   color: #03c7fd;
-}
-
-/* accessibility: respect reduced motion preference */
-@media (prefers-reduced-motion: reduce) {
-  .word-list {
-    animation: none;
-  }
 }
