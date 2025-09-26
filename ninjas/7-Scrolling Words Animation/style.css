@@ -30,7 +30,7 @@ word-list {
   height: 30px;
   display: block;
 }
-@keyframes cycle {
+/* @keyframes cycle {
   0% {
     top: 0;
   }
@@ -64,7 +64,7 @@ word-list {
   100% {
     top: 0px;
   }
-}
+} */
 
 /* colors */
 span:nth-child(1) {
