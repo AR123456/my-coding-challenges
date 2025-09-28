@@ -35,6 +35,8 @@ body {
   border: 1px solid teal;
   border-radius: 25px;
   margin-bottom: 10rem;
+  font-size: 40px;
+  font-weight: 500;
 }
 .hidden {
   display: none;
