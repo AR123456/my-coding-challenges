@@ -25,6 +25,8 @@ body {
   flex-direction: column;
   width: 100vw;
   height: 100vh;
+  transform-style: preserve-3d; /* Allows children to be transformed in 3D */
+  transition: transform 0.8s; /* Smooth transition for the flip */
 }
 .card {
   display: flex;
@@ -41,6 +43,13 @@ body {
   /* Todo javascript rotateY from 0 to 180 */
   transform: rotateX(0deg) rotateY(0deg) rotateZ(360deg);
 }
-.hidden {
-  display: none;
+.question,
+.answer {
+  backface-visibility: hidden;
+}
+.answer {
+  transform: rotateY(180deg);
+}
+.card:hover {
+  transform: rotateY(180deg);
 }
