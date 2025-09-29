@@ -38,7 +38,8 @@ body {
   font-size: 40px;
   font-weight: 500;
   box-shadow: 4px 5px 10px 1px #000000;
-  transform: rotateX(12deg) rotateY(288deg) rotateZ(359deg);
+  /* Todo rotateY from 0 to 180 */
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(360deg);
 }
 .hidden {
   display: none;
