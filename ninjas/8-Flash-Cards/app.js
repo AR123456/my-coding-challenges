@@ -8,3 +8,5 @@ question.addEventListener("click", () => {
   answer.classList.remove("hidden");
   question.classList.add("hidden");
 });
+// https://css-tricks.com/controlling-css-animations-transitions-javascript/
+const turn = () => {};
