@@ -43,3 +43,7 @@ html {
   background-color: #e0e0e0;
   transform: rotateY(180deg); /* Initially rotate the backface to be hidden */
 }
+/* Flip effect on hover */
+.flip-card-container:hover .flip-card {
+  transform: rotateY(180deg); /* Rotate the entire card to reveal the back */
+}
