@@ -36,3 +36,10 @@ html {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+.flip-card-front {
+  background-color: #f0f0f0;
+}
+.flip-card-back {
+  background-color: #e0e0e0;
+  transform: rotateY(180deg); /* Initially rotate the backface to be hidden */
+}
