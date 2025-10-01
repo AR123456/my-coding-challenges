@@ -3,53 +3,7 @@
   margin: 0;
   padding: 0;
 }
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden;
+html {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100vw;
-  height: 100vh;
-  transform-style: preserve-3d; /* Allows children to be transformed in 3D */
-  transition: transform 0.8s; /* Smooth transition for the flip */
-}
-.card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 30rem;
-  width: 30rem;
-  border: 1px solid teal;
-  border-radius: 25px;
-  margin-bottom: 10rem;
-  font-size: 40px;
-  font-weight: 500;
-  box-shadow: 4px 5px 10px 1px #000000;
-  /* Todo javascript rotateY from 0 to 180 */
-  transform: rotateX(0deg) rotateY(0deg) rotateZ(360deg);
-}
-.question,
-.answer {
-  backface-visibility: hidden;
-}
-.answer {
-  transform: rotateY(180deg);
-}
-.card:hover {
-  transform: rotateY(180deg);
 }
