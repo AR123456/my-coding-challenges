@@ -7,6 +7,13 @@
 html {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
 /* Container for the flip card, establishing 3D space */
 .flip-card-container {
   width: 300px;
