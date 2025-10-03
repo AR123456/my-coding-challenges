@@ -32,7 +32,7 @@ body {
 /* Front and back faces of the card */
 .flip-card-front,
 .flip-card-back {
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
   height: 100%;
   /* the crux  */
@@ -40,7 +40,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  /* text-align: center; */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
