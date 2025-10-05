@@ -6,14 +6,20 @@
 
 html {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 body {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   background: #333;
+  color: #fff; */
+  background: #333;
+  text-align: center;
+  padding: 20px;
   color: #fff;
 }
 .card {
@@ -25,7 +31,6 @@ body {
 }
 section {
   perspective: 900px;
-  transform-style: preserve-3d;
 }
 .card {
   transition: transform 0.9px;
