@@ -23,3 +23,15 @@ body {
   margin: 30px auto;
   text-align: center;
 }
+section {
+  perspective: 900px;
+  transform-style: preserve-3d;
+}
+.card {
+  transition: transform 0.5px;
+  transform-style: preserve-3d;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
