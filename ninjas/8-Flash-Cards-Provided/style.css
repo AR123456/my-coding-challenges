@@ -33,7 +33,7 @@ section {
   perspective: 900px;
 }
 .card {
-  transition: transform 0.9px;
+  transition: transform 0.9s;
   transform-style: preserve-3d;
 }
 .front,
