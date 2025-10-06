@@ -10,16 +10,12 @@ html {
   padding: 0;
 }
 body {
-  /* display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   background: #333;
-  color: #fff; */
-  background: #333;
-  text-align: center;
-  padding: 20px;
   color: #fff;
 }
 .card {
@@ -33,7 +29,7 @@ section {
   perspective: 900px;
 }
 .card {
-  transition: transform 0.9s;
+  transition: transform 0.7s;
   transform-style: preserve-3d;
 }
 .front,
